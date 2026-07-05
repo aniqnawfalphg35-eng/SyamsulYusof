@@ -1,0 +1,378 @@
+/* Reset & Base Structural Matrix Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Georgia", "Times New Roman", serif;
+    line-height: 1.5;
+    padding-bottom: 5rem;
+    overflow-x: hidden;
+}
+
+/* Fluid Adaptive Font Scaling Base Engine */
+html {
+    font-size: clamp(14px, 1.15vw, 20px);
+}
+
+/* Persistent Header Setup */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 0.75rem 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-arrow-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-arrow {
+    height: 2.2rem;
+    width: auto;
+    transition: transform 0.2s ease;
+}
+
+.nav-arrow:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 900;
+    font-family: "Arial Black", "Impact", sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    padding: 0.25rem 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: #cc0000;
+}
+
+/* Title Core Block Style definitions */
+.main-title-container {
+    width: 100%;
+    text-align: center;
+    padding: 2.5rem 1rem 1rem 1rem;
+    background: linear-gradient(180deg, #111 0%, #000 100%);
+}
+
+.movie-main-title {
+    font-family: "Arial Black", "Impact", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0 4px 10px rgba(255,255,255,0.1);
+}
+
+/* Layout Framework Canvas Container Box */
+.content-wrapper {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+/* Image Scaling Standard System Rules */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Primary Flex Matrix Formatting Rows */
+.section-row {
+    display: flex;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.col-left, .col-right {
+    flex: 1;
+}
+
+.split-content-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* Poster Edge Visual Drop Shadows */
+.poster-shadow {
+    box-shadow: 0 0 25px rgba(255,255,255,0.08);
+}
+
+/* Part 1 Embedded Top Cast Mini-Panel Framework */
+.cast-panel-mini {
+    background-color: #000000;
+    border: 3px solid #ffffff;
+    border-radius: 45px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.panel-header {
+    background-color: #cccccc;
+    color: #000000;
+    text-align: center;
+    padding: 0.8rem;
+}
+
+.panel-header h2 {
+    font-family: "Arial Black", "Impact", sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.cast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 1rem;
+    padding: 2rem 1.5rem;
+}
+
+.cast-card {
+    text-align: center;
+}
+
+.cast-card img {
+    width: 110px;
+    height: 145px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border: 1px solid #333;
+}
+
+.actor-name {
+    font-family: "Arial Black", sans-serif;
+    font-weight: 900;
+    font-size: 0.75rem;
+    line-height: 1.2;
+}
+
+.character-name {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Part 1 Lower Credits & Narrative Text Blocks Configuration */
+.credits-blurb-container {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.credits-left {
+    flex: 1;
+}
+
+.credits-left h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 0.3rem;
+}
+
+.credits-left ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.blurb-right {
+    flex: 1.2;
+}
+
+.summary-paragraph {
+    font-size: 1.45rem;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* Part 2 Production Origins Grid Structure Rules */
+.image-block-large {
+    flex: 1.2;
+}
+
+.alignment-fix {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.bts-img {
+    width: 100%;
+    border: 1px solid #222;
+}
+
+.text-stretched p {
+    font-size: 1.45rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Part 3 Reception Columns & Media Arrays Formatting Rules */
+.box-office-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.dual-image-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.spacing-bottom {
+    margin-bottom: 1.5rem;
+}
+
+.clipping-img {
+    max-width: 100%;
+    border: 1px solid #333;
+}
+
+.side-info {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.side-info p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.center-text-block {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bottom-grosses p {
+    margin-bottom: 2.5rem;
+}
+
+/* Part 4 Full-Span Top-Filled Custom Awards Board Matrix Component Rules */
+.awards-panel {
+    background-color: #000000;
+    border: 3px solid #ffffff;
+    border-radius: 45px;
+    overflow: hidden;
+}
+
+.awards-vertical-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.awards-top-image-container {
+    width: 100%;
+    height: auto;
+    max-height: 620px;
+    overflow: hidden;
+    border-bottom: 3px solid #ffffff;
+}
+
+.fill-panel-top-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.awards-bottom-lists {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3.5rem 4rem;
+}
+
+.award-category h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem;
+}
+
+.award-category ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+
+.award-category li {
+    font-size: 1.35rem;
+    margin-bottom: 0.6rem;
+    font-weight: bold;
+}
+
+/* Responsive Adaptive Fluid Component Media Modifiers */
+@media (max-width: 950px) {
+    .section-row, .split-row, .credits-blurb-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .movie-main-title {
+        font-size: 2.5rem;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .awards-bottom-lists {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .cast-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .panel-header h2 {
+        font-size: 2rem;
+    }
+}

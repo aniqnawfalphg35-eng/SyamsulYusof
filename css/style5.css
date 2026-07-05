@@ -1,0 +1,341 @@
+/* Reset & Base Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Georgia", "Times New Roman", serif;
+    line-height: 1.5;
+    padding-bottom: 5rem;
+    overflow-x: hidden;
+}
+
+/* Fluid Responsive Base Typography */
+html {
+    font-size: clamp(14px, 1.15vw, 20px);
+}
+
+/* Sticky Header Box Setup */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 0.75rem 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-arrow-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-arrow {
+    height: 2.2rem;
+    width: auto;
+    transition: transform 0.2s ease;
+}
+
+.nav-arrow:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 900;
+    font-family: "Arial Black", "Impact", sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    padding: 0.25rem 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: #cc0000;
+}
+
+/* Main Movie Title Segment Layout */
+.main-title-container {
+    width: 100%;
+    text-align: center;
+    padding: 2.5rem 1rem 1rem 1rem;
+    background: linear-gradient(180deg, #111 0%, #000 100%);
+}
+
+.movie-main-title {
+    font-family: "Arial Black", "Impact", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0 4px 10px rgba(255,255,255,0.1);
+}
+
+/* Global Content Wrapper Layout */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+/* Global Image Handlers */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Common Flex Rows */
+.section-row {
+    display: flex;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.col-left, .col-right {
+    flex: 1;
+}
+
+/* Part 1 Adjustments */
+.poster-shadow {
+    box-shadow: 0 0 25px rgba(255,255,255,0.08);
+}
+
+.synopsis-text h2 {
+    font-size: 2.2rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+}
+
+.synopsis-text ul {
+    list-style-type: disc;
+    margin-left: 1.8rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.synopsis-text p {
+    font-size: 1.35rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-weight: bold;
+}
+
+/* Shared Panels Styles (Part 2 & Part 5 Rounded Boxes) */
+.cast-panel, .awards-panel {
+    background-color: #000000;
+    border: 3px solid #e0e0e0;
+    border-radius: 45px;
+    overflow: hidden;
+}
+
+.panel-header {
+    background-color: #cccccc;
+    color: #000000;
+    text-align: center;
+    padding: 1rem;
+}
+
+.panel-header h2 {
+    font-family: "Arial Black", "Impact", sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.panel-body {
+    padding: 3rem 2rem;
+}
+
+/* Part 2 Grid Layout */
+.cast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem 1.5rem;
+}
+
+.cast-card {
+    text-align: center;
+}
+
+.cast-card img {
+    width: 190px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 1px solid #333;
+}
+
+.actor-name {
+    font-family: "Arial Black", sans-serif;
+    font-weight: 900;
+    font-size: 1.15rem;
+}
+
+.character-name {
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+/* Part 3 Production Layout */
+.image-block-large {
+    flex: 1.2;
+}
+
+.alignment-fix {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.bts-img {
+    width: 100%;
+    border: 1px solid #222;
+}
+
+.text-stretched p {
+    font-size: 1.45rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Part 4 Box Office Layout styles */
+.box-office-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.clipping-img {
+    max-width: 100%;
+    border: 1px solid #333;
+}
+
+.side-info {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.side-info p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.bottom-grosses p {
+    margin-bottom: 2.5rem;
+}
+
+/* Part 5 Top-to-Bottom Box Fill Layout Update */
+.awards-vertical-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.awards-top-image-container {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    overflow: hidden;
+    border-bottom: 3px solid #e0e0e0;
+}
+
+.fill-panel-top-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.awards-bottom-lists {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3.5rem 4rem;
+}
+
+.award-category h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem;
+}
+
+.award-category ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+
+.award-category li {
+    font-size: 1.35rem;
+    margin-bottom: 0.6rem;
+    font-weight: bold;
+}
+
+/* Responsiveness adjustments for smaller devices */
+@media (max-width: 900px) {
+    .section-row, .split-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cast-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .movie-main-title {
+        font-size: 2.5rem;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .awards-bottom-lists {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .cast-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .panel-header h2 {
+        font-size: 2rem;
+    }
+}

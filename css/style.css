@@ -1,0 +1,57 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.main-wrapper {
+    width: 100%;
+    max-width: 960px; /* Standard website width */
+    text-align: center;
+}
+
+/* Maroon Header Box */
+.header-box {
+    background-color: maroon;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid #333;
+}
+
+/* Maroon Interactive Button */
+.cta-box {
+    display: block;
+    background-color: maroon;
+    color: #fff;
+    padding: 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-box:hover {
+    background-color: #5c0000; /* Slightly darker shade on hover */
+    cursor: pointer;
+}
